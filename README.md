@@ -1,25 +1,71 @@
-# DiabetesPredictionProject
+# Diabetes Prediction Project
+
+This project focuses on predicting the onset of diabetes in Pima Indian women using the **Pima Indians Diabetes Database**. The project began with a basic **Logistic Regression** model and progressively improved over multiple iterations to introduce more advanced models like **XGBoost** and **SHAP** for model explainability.
+
+---
+
+## Dataset Description
+
+The dataset contains medical data for Pima Indian women, including several features known to be important for predicting diabetes:
+
+- **Pregnancies**: Number of times pregnant.
+- **Glucose**: Plasma glucose concentration a 2 hours in an oral glucose tolerance test.
+- **BloodPressure**: Diastolic blood pressure (mm Hg).
+- **SkinThickness**: Triceps skinfold thickness (mm).
+- **Insulin**: 2-Hour serum insulin (mu U/ml).
+- **BMI**: Body mass index (weight in kg/(height in m)^2).
+- **DiabetesPedigreeFunction**: A function that scores the likelihood of diabetes based on family history.
+- **Age**: Age (years).
+- **Outcome**: Class variable (0 for no diabetes, 1 for diabetes).
+
+---
+
+## Version History
+
+### **Version 1: Initial Logistic Regression Model**
+
+The first version of the project was designed to fulfill the initial assignment requirements. In this version, the primary goal was to:
+- Implement a basic **Logistic Regression** model to predict the onset of diabetes.
+- Perform **Exploratory Data Analysis (EDA)**.
+- Recode the `Outcome` variable as a factor.
+- Evaluate the model performance using **ROC curve**, **AUC**, and basic accuracy metrics.
+
+### **Version 2: Enhanced EDA and Data Visualization**
+
+This version introduced a deeper **exploratory data analysis (EDA)** to gain more insights into the data:
+- **Data Visualizations**: Using `ggplot2` for visualizing distributions and relationships between features.
+- **Feature Correlations**: Correlation matrix to explore feature relationships.
+- **Data Cleaning**: Missing values and outliers were handled.
+
+While still using the **Logistic Regression** model, this version aimed to better understand the dataset and improve model preparation.
+
+### **Version 3: Logistic Regression Model Tuning and Feature Selection**
+
+In Version 3, we began refining the model:
+- **Hyperparameter Tuning**: Feature selection was performed using **AIC** to optimize the logistic regression model.
+- **Performance Metrics**: Detailed model evaluation using precision, recall, F1 score, and accuracy.
+- **Model Evaluation**: Using metrics like **AUC**, **precision**, and **recall** for performance improvement.
+
+### **Version 4: Advanced Logistic Regression with Interpretability**
+
+In Version 4, we emphasized model **interpretability**:
+- **Coefficient Analysis**: Detailed interpretation of logistic regression coefficients to explain feature importance.
+- **Confusion Matrix**: Enhanced model evaluation through confusion matrix analysis.
+- **Threshold Adjustment**: Investigating classification threshold changes for optimal accuracy.
+
+### **Version 5: Advanced XGBoost Model with SHAP Explanations**
+
+In the final version, the project was significantly advanced with **XGBoost**:
+- **XGBoost**: Implemented a gradient boosting algorithm to capture non-linear feature relationships.
+- **Bayesian Optimization**: Hyperparameter tuning via **Bayesian optimization** to improve model performance.
+- **SHAP Interpretability**: SHAP values were introduced for feature importance analysis and model transparency.
+- **Cross-Validation**: A 5-fold cross-validation ensured the model's robustness and generalizability.
 
 
-## Project Overview
-This project aims to predict the likelihood of diabetes using a **Logistic Regression Model**. The dataset used for this project contains various medical and demographic variables that are analyzed to determine the factors most strongly associated with diabetes risk. The ultimate goal is to build a predictive model that can classify individuals based on their risk of developing diabetes.
+***
 
 
-## Dataset
-The dataset used in this project is **`diabetes.csv`**, which includes the following features:
-
-- **Pregnancies**: Number of times pregnant
-- **Glucose**: Plasma glucose concentration
-- **BloodPressure**: Diastolic blood pressure (mm Hg)
-- **SkinThickness**: Triceps skinfold thickness (mm)
-- **Insulin**: 2-Hour serum insulin (mu U/ml)
-- **BMI**: Body mass index (weight in kg/(height in m)^2)
-- **DiabetesPedigreeFunction**: A function that scores the likelihood of diabetes based on family history
-- **Age**: Age in years
-- **Outcome**: The target variable, indicating whether the patient has diabetes (1) or not (0)
-
-The dataset is sourced from medical diagnostic records and focuses on predicting the presence of diabetes in women.
-
+The content of this block applies mainly to the first version(Version 1).
 
 ## Modeling Approach
 ### Logistic Regression
@@ -116,6 +162,8 @@ This project demonstrates the use of **Logistic Regression** for predicting diab
    ```r
    source("DiabetesPrediction.R")
    ```
+
+---
 
 
 ## License

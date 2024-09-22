@@ -352,39 +352,100 @@ display: none;
 </div>
 
 
-<div id="diabetespredictionproject" class="section level1">
-<h1>DiabetesPredictionProject</h1>
-<div id="project-overview" class="section level2">
-<h2>Project Overview</h2>
-<p>This project aims to predict the likelihood of diabetes using a
-<strong>Logistic Regression Model</strong>. The dataset used for this
-project contains various medical and demographic variables that are
-analyzed to determine the factors most strongly associated with diabetes
-risk. The ultimate goal is to build a predictive model that can classify
-individuals based on their risk of developing diabetes.</p>
-</div>
-<div id="dataset" class="section level2">
-<h2>Dataset</h2>
-<p>The dataset used in this project is
-<strong><code>diabetes.csv</code></strong>, which includes the following
-features:</p>
+<div id="diabetes-prediction-project" class="section level1">
+<h1>Diabetes Prediction Project</h1>
+<p>This project focuses on predicting the onset of diabetes in Pima
+Indian women using the <strong>Pima Indians Diabetes Database</strong>.
+The project began with a basic <strong>Logistic Regression</strong>
+model and progressively improved over multiple iterations to introduce
+more advanced models like <strong>XGBoost</strong> and
+<strong>SHAP</strong> for model explainability.</p>
+<hr />
+<div id="dataset-description" class="section level2">
+<h2>Dataset Description</h2>
+<p>The dataset contains medical data for Pima Indian women, including
+several features known to be important for predicting diabetes:</p>
 <ul>
-<li><strong>Pregnancies</strong>: Number of times pregnant</li>
-<li><strong>Glucose</strong>: Plasma glucose concentration</li>
+<li><strong>Pregnancies</strong>: Number of times pregnant.</li>
+<li><strong>Glucose</strong>: Plasma glucose concentration a 2 hours in
+an oral glucose tolerance test.</li>
 <li><strong>BloodPressure</strong>: Diastolic blood pressure (mm
-Hg)</li>
-<li><strong>SkinThickness</strong>: Triceps skinfold thickness (mm)</li>
-<li><strong>Insulin</strong>: 2-Hour serum insulin (mu U/ml)</li>
+Hg).</li>
+<li><strong>SkinThickness</strong>: Triceps skinfold thickness
+(mm).</li>
+<li><strong>Insulin</strong>: 2-Hour serum insulin (mu U/ml).</li>
 <li><strong>BMI</strong>: Body mass index (weight in kg/(height in
-m)^2)</li>
+m)^2).</li>
 <li><strong>DiabetesPedigreeFunction</strong>: A function that scores
-the likelihood of diabetes based on family history</li>
-<li><strong>Age</strong>: Age in years</li>
-<li><strong>Outcome</strong>: The target variable, indicating whether
-the patient has diabetes (1) or not (0)</li>
+the likelihood of diabetes based on family history.</li>
+<li><strong>Age</strong>: Age (years).</li>
+<li><strong>Outcome</strong>: Class variable (0 for no diabetes, 1 for
+diabetes).</li>
 </ul>
-<p>The dataset is sourced from medical diagnostic records and focuses on
-predicting the presence of diabetes in women.</p>
+<hr />
+</div>
+<div id="version-history" class="section level2">
+<h2>Version History</h2>
+<div id="version-1-initial-logistic-regression-model" class="section level3">
+<h3><strong>Version 1: Initial Logistic Regression Model</strong></h3>
+<p>The first version of the project was designed to fulfill the initial
+assignment requirements. In this version, the primary goal was to: -
+Implement a basic <strong>Logistic Regression</strong> model to predict
+the onset of diabetes. - Perform <strong>Exploratory Data Analysis
+(EDA)</strong>. - Recode the <code>Outcome</code> variable as a factor.
+- Evaluate the model performance using <strong>ROC curve</strong>,
+<strong>AUC</strong>, and basic accuracy metrics.</p>
+</div>
+<div id="version-2-enhanced-eda-and-data-visualization" class="section level3">
+<h3><strong>Version 2: Enhanced EDA and Data Visualization</strong></h3>
+<p>This version introduced a deeper <strong>exploratory data analysis
+(EDA)</strong> to gain more insights into the data: - <strong>Data
+Visualizations</strong>: Using <code>ggplot2</code> for visualizing
+distributions and relationships between features. - <strong>Feature
+Correlations</strong>: Correlation matrix to explore feature
+relationships. - <strong>Data Cleaning</strong>: Missing values and
+outliers were handled.</p>
+<p>While still using the <strong>Logistic Regression</strong> model,
+this version aimed to better understand the dataset and improve model
+preparation.</p>
+</div>
+<div id="version-3-logistic-regression-model-tuning-and-feature-selection" class="section level3">
+<h3><strong>Version 3: Logistic Regression Model Tuning and Feature
+Selection</strong></h3>
+<p>In Version 3, we began refining the model: - <strong>Hyperparameter
+Tuning</strong>: Feature selection was performed using
+<strong>AIC</strong> to optimize the logistic regression model. -
+<strong>Performance Metrics</strong>: Detailed model evaluation using
+precision, recall, F1 score, and accuracy. - <strong>Model
+Evaluation</strong>: Using metrics like <strong>AUC</strong>,
+<strong>precision</strong>, and <strong>recall</strong> for performance
+improvement.</p>
+</div>
+<div id="version-4-advanced-logistic-regression-with-interpretability" class="section level3">
+<h3><strong>Version 4: Advanced Logistic Regression with
+Interpretability</strong></h3>
+<p>In Version 4, we emphasized model <strong>interpretability</strong>:
+- <strong>Coefficient Analysis</strong>: Detailed interpretation of
+logistic regression coefficients to explain feature importance. -
+<strong>Confusion Matrix</strong>: Enhanced model evaluation through
+confusion matrix analysis. - <strong>Threshold Adjustment</strong>:
+Investigating classification threshold changes for optimal accuracy.</p>
+</div>
+<div id="version-5-advanced-xgboost-model-with-shap-explanations" class="section level3">
+<h3><strong>Version 5: Advanced XGBoost Model with SHAP
+Explanations</strong></h3>
+<p>In the final version, the project was significantly advanced with
+<strong>XGBoost</strong>: - <strong>XGBoost</strong>: Implemented a
+gradient boosting algorithm to capture non-linear feature relationships.
+- <strong>Bayesian Optimization</strong>: Hyperparameter tuning via
+<strong>Bayesian optimization</strong> to improve model performance. -
+<strong>SHAP Interpretability</strong>: SHAP values were introduced for
+feature importance analysis and model transparency. -
+<strong>Cross-Validation</strong>: A 5-fold cross-validation ensured the
+model’s robustness and generalizability.</p>
+<hr />
+<p>The following applies mainly to the first version.</p>
+</div>
 </div>
 <div id="modeling-approach" class="section level2">
 <h2>Modeling Approach</h2>
