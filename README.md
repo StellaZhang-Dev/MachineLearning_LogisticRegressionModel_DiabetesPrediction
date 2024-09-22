@@ -62,10 +62,12 @@ In the final version, the project was significantly advanced with **XGBoost**:
 - **Cross-Validation**: A 5-fold cross-validation ensured the model's robustness and generalizability.
 
 
-***
+---
 
+> **The following applies mainly to the first version (Version 1).**
 
-The content of this block applies mainly to the first version(Version 1).
+---
+
 
 ## Modeling Approach
 ### Logistic Regression
